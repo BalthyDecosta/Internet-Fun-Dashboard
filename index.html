@@ -1,0 +1,108 @@
+
+
+
+  
+  
+  
+  
+
+
+  
+
+    
+
+      
+API-leksaksidan 🎉
+
+      
+En lekfull dashboard med gratis API:er, random kul-data och en extra knapp för "Damn You Autocorrect"-känsla. Byggd som en enda HTML-fil så du enkelt kan testa lokalt eller slänga upp på Vercel.
+
+      
+
+        Ladda allt kul
+        Överraska mig
+      
+
+    
+
+
+<section class="grid">
+  <article class="card">
+    <h2>😂 Dagens skämt</h2>
+    <div class="value" id="joke">Tryck på “Ladda allt kul”.</div>
+    <div class="actions">
+      <button id="jokeBtn" class="secondary">Nytt skämt</button>
+    </div>
+    <div class="tiny">Källa: Official Joke API</div>
+  </article>
+
+  <article class="card">
+    <h2>🧠 Onödig fakta</h2>
+    <div class="value" id="fact">Här kan livsviktig oviktig kunskap dyka upp.</div>
+    <div class="actions">
+      <button id="factBtn" class="secondary">Ny fakta</button>
+    </div>
+    <div class="tiny">Källa: Useless Facts API</div>
+  </article>
+
+  <article class="card">
+    <h2>🐱 Kattläge</h2>
+    <div class="cat-box" id="catBox"><span class="muted">Katt laddas här…</span></div>
+    <div class="actions">
+      <button id="catBtn" class="secondary">Ny katt</button>
+    </div>
+    <div class="tiny">Källa: The Cat API</div>
+  </article>
+
+  <article class="card wide">
+    <h2>🌍 Landfakta</h2>
+    <div class="pillrow" id="countryMeta"></div>
+    <div class="value" id="country">Tryck för att få ett slumpat land.</div>
+    <div class="actions">
+      <button id="countryBtn" class="secondary">Slumpa land</button>
+    </div>
+    <div class="tiny">Källa: REST Countries</div>
+  </article>
+
+  <article class="card wide">
+    <h2>💬 Citat</h2>
+    <div class="big" id="quoteText">"Här kan ett citat dyka upp."</div>
+    <div class="value muted" id="quoteAuthor"></div>
+    <div class="actions">
+      <button id="quoteBtn" class="secondary">Nytt citat</button>
+    </div>
+    <div class="tiny">Källa: Quotable</div>
+  </article>
+
+  <article class="card full">
+    <h2>📱 Damn You Autocorrect-generator</h2>
+    <p class="muted small">Skriv en vanlig mening. Appen byter ut ord på ett korkat sätt och räknar ut hur kaosigt resultatet blev.</p>
+    <textarea id="inputText" placeholder="Exempel: Hej älskling jag köper mjölk och bröd på vägen hem. Vi ses snart."></textarea>
+    <div class="actions">
+      <button id="autocorrectBtn">Sabba texten</button>
+      <button id="cleanBtn" class="secondary">Rensa</button>
+      <button id="sampleBtn" class="secondary">Lägg in exempel</button>
+    </div>
+    <div class="result-box">
+      <div class="small muted">Original</div>
+      <div class="value" id="originalOut">–</div>
+      <hr style="border:none;border-top:1px solid rgba(255,255,255,.08);margin:14px 0;">
+      <div class="small muted">Autocorrect-fail</div>
+      <div class="value" id="brokenOut">–</div>
+      <div class="pillrow">
+        <span class="pill" id="chaosLabel">Kaosnivå: 0%</span>
+        <span class="pill" id="swapLabel">Bytta ord: 0</span>
+      </div>
+      <div class="meter"><div class="bar" id="chaosBar"></div></div>
+    </div>
+    <div class="footer-note">Ingen riktig extern API används här för autocorrect-delen — den körs lokalt i webbläsaren och gör sidan snabb, gratis och enkel att hosta.</div>
+  </article>
+</section>
+
+
+  
+
+  
+
+
+
